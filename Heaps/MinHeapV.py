@@ -52,16 +52,18 @@ class MinHeap:
 
 # Driver pgoratm to test above function
 heapObj = MinHeap()
-heapObj.insertKey(2)
-heapObj.insertKey(4)
+heapObj.insertKey(1)
 heapObj.insertKey(3)
-heapObj.insertKey(7)
-heapObj.insertKey(7)
 heapObj.insertKey(5)
+heapObj.insertKey(4)
+heapObj.insertKey(10)
+heapObj.insertKey(13)
+heapObj.insertKey(7)
 heapObj.insertKey(6)
-heapObj.insertKey(8)
-heapObj.insertKey(9)
+heapObj.insertKey(17)
+heapObj.insertKey(2)
 
+"""
 heapObj.extractMin()
 
 heapObj.getMin()
@@ -71,6 +73,7 @@ heapObj.insertKey(1)
 heapObj.getMin()
 
 heapObj.decreaseKey(1, 10)
+"""
 
-print("\n"+ "Output: ", end= ' ')
+print("\n"+ "Output:", end= ' ')
 print(heapObj.heap)

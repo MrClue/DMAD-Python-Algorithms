@@ -6,8 +6,18 @@ from heapq import heappop, heappush, heapify
 heap = []
 heapify(heap)
 
+# heappush + print
+def printPush(item):
+	heappush(heap, -1 * item)
+
+	print("Current Heap Elements: ")
+	for i in heap:
+		print(-1 * i, end = ' ')
+	print() # new line
+
 # Adding items to the heap using heappush
 # function by multiplying them with -1
+"""
 heappush(heap, -1 * 10)
 heappush(heap, -1 * 8)
 heappush(heap, -1 * 6)
@@ -18,8 +28,20 @@ heappush(heap, -1 * 5)
 heappush(heap, -1 * 1)
 heappush(heap, -1 * 2)
 heappush(heap, -1 * 9)
+"""
+printPush(10)
+printPush(8)
+printPush(6)
+printPush(3)
+printPush(7)
+printPush(4)
+printPush(5)
+printPush(1)
+printPush(2)
+printPush(9)
 
 # printing the value of maximum element
+"""
 print("Head value of heap: "+str(-1 * heap[0]))
 
 element = heappop(heap)
@@ -28,5 +50,5 @@ element = heappop(heap)
 print("The heap elements: ")
 for i in heap:
 	print(-1 * i, end = ' ')
-
+"""
 
