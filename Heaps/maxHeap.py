@@ -29,26 +29,25 @@ heappush(heap, -1 * 1)
 heappush(heap, -1 * 2)
 heappush(heap, -1 * 9)
 """
+printPush(21)
+printPush(18)
 printPush(10)
+printPush(12)
 printPush(8)
-printPush(6)
-printPush(3)
-printPush(7)
-printPush(4)
-printPush(5)
-printPush(1)
-printPush(2)
 printPush(9)
+printPush(4)
+printPush(7)
+printPush(5)
+printPush(2)
 
-# printing the value of maximum element
-"""
-print("Head value of heap: "+str(-1 * heap[0]))
+print() # new line
 
+# extracting the maximum element from the heap
+print("HEAP-EXTRACT-MAX: "+str(-1 * heap[0]) + "\n")
 element = heappop(heap)
 
 # printing the elements of the heap
-print("The heap elements: ")
+print("The Heap Elements: ")
 for i in heap:
 	print(-1 * i, end = ' ')
-"""
 
