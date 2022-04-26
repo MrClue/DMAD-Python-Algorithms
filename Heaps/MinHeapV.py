@@ -75,5 +75,8 @@ heapObj.getMin()
 heapObj.decreaseKey(1, 10)
 """
 
+# MinHeapExtract
+heapObj.getMin()
+heapObj.extractMin()
 print("\n"+ "Output:", end= ' ')
 print(heapObj.heap)

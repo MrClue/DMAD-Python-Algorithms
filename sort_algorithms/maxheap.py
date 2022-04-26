@@ -110,6 +110,5 @@ if __name__ == "__main__":
     maxHeap.insert(9)
   
     maxHeap.Print()
-
     print(maxHeap.Heap[1:])    
-    print("HEAP EXTRAXT MAX: The Max val is " + str(maxHeap.extractMax()))
+

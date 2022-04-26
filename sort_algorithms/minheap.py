@@ -109,10 +109,7 @@ if __name__ == "__main__":
     minHeap.insert(4)
     minHeap.insert(5)
     minHeap.insert(1)
-    minHeap.insert(2)
-    minHeap.minHeap()
- 
-    minHeap.Print()
 
-    print(minHeap.Heap[1:]) 
-    print("HEAP EXTRACT MIN: The Min val is " + str(minHeap.extractMin()))
+    print(minHeap.Heap[1:])
+    minHeap.Print()
+    
