@@ -1,3 +1,5 @@
+# This Python file uses the following encoding: utf-8
+
 # Python Program to find the number of 
 # transpositions in a permutation 
 N = 1000001

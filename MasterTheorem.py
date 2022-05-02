@@ -1,3 +1,5 @@
+# This Python file uses the following encoding: utf-8
+
 # Master Theorem Calculator
 # By Yusaf Tareen
 # Logic inspiration: https://github.com/hamza1886/master-theorem

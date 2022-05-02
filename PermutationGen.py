@@ -1,3 +1,5 @@
+# This Python file uses the following encoding: utf-8
+
 import random
 
 # Generere en tilfældig permutation af heltallene fra 0 til n-1 (n som input)

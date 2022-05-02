@@ -1,3 +1,5 @@
+# This Python file uses the following encoding: utf-8
+
 # Python3 program to find
 # minimum number of swaps
 # required to sort an array
