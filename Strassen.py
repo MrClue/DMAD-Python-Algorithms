@@ -1,3 +1,5 @@
+# This Python file uses the following encoding: utf-8
+
 # Strassen's Method for multiplying n x n matrixes
 # Time Complexity: T(n) = 7T(n/2) + O(n^2)
 # which is: ϴ(n^log7) or O(n^2.81)
