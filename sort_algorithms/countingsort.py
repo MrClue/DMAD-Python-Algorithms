@@ -26,7 +26,7 @@ def countingSort(array):
         array[i] = output[i]
 
 
-data = [6,0,2,0,1,3,4,6,1,3,2]
+data = [7,4,1,2,6,4,0,4,4,4,7,2]
 countingSort(data)
 print("Sorted Array in Ascending Order: ")
 print(data)

@@ -210,8 +210,6 @@ class Node {
     };
   }
   
-  
-  
   const bst = new BST();
   
   bst.add(9);
