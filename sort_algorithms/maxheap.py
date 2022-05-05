@@ -99,15 +99,22 @@ if __name__ == "__main__":
       
     maxHeap = MaxHeap(15)
     maxHeap.insert(10)
-    maxHeap.insert(8)
-    maxHeap.insert(6)
-    maxHeap.insert(3)
     maxHeap.insert(7)
-    maxHeap.insert(4)
+    maxHeap.insert(6)
     maxHeap.insert(5)
+    maxHeap.insert(4)
+    maxHeap.insert(2)
+    maxHeap.insert(3)
     maxHeap.insert(1)
     maxHeap.insert(2)
-    maxHeap.insert(9)
+    maxHeap.insert(3)
+    maxHeap.insert(1)
+    maxHeap.insert(1)
+
+    print('Original tree')
+    print(maxHeap.Heap[1:]) 
+
+    maxHeap.extractMax()
   
     maxHeap.Print()
     print(maxHeap.Heap[1:])    
