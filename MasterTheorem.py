@@ -102,7 +102,7 @@ def SaC(a, b, d, k):
         print("Invalid input!")
 
 # Lets compute solution for T(n) using Divide and Conquer (DaC)
-DaC(4, 2, 2, 1)
+DaC(16, 2, 4, 1)
 
 # Lets compute solution for T(n) using Decrease and Conquer (SaC)
 #SaC(1, 1, 1, 0)
