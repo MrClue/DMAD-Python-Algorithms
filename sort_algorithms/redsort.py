@@ -1,8 +1,5 @@
 # Implementing Red-Black Tree in Python
-
-
 import sys
-
 
 # Node creation
 class Node():
