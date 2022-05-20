@@ -6,6 +6,22 @@
 
 import math
 
+def D(d):
+    if (d == 0):
+        return ""
+    elif (d == 1):
+        return "n"
+    elif (d > 1):
+        return "n^"+str(d)
+
+def K(k):
+    if (k == 0):
+        return ""
+    elif (k == 1):
+        return " * log(n)"
+    elif (k > 1):
+        return " * log^"+str(k)+"(n)"
+
 # Divide and Conquer (DaC)
 # T(n) = aT(n/b) + f(n), where
 #   a >= 1
@@ -14,7 +30,7 @@ import math
 #       d >= 0 and k >= 0
 
 def DaC(a, b, d, k):
-    print("Input recurrence: T(n) = "+str(a)+"T(n/"+str(b)+") + O(n^"+str(d)+" * log^"+str(k)+"(n))"+"\n")
+    print("Input recurrence: T(n) = "+str(a)+"T(n/"+str(b)+") + O("+D(d) + K(k)+")" +"\n")
 
     print("Using: Divide and Conquer!")
     # check main constants
@@ -64,20 +80,15 @@ def DaC(a, b, d, k):
 #   b > 0, 
 #   f(n) = O(n^d log^k n), where
 #       d >= 0 and k >= 0
- 
+
 def SaC(a, b, d, k):
-    print("Input recurrence: "+ "T(n) = "+str(a)+"T(n-"+str(b)+") + O(n^"+str(d)+" * log^"+str(k)+"(n))"+"\n")
+    print("\n"+ "Input recurrence: "+ "T(n) = "+str(a)+"T(n-"+str(b)+") + O("+D(d) + K(k)+")" +"\n")
 
-    # prettify result
-    if (k == 0): k = ""
-    elif (k == 1): k = " log(n)"
-    else: k = " log^"+str(k)+"(n)"
-
-    if (d == 0 and a != 1): d = ""
-    elif (d == 1 and a != 1 and a < 1): d = "n" # case 1 only
-    elif (d == 1 and a != 1): d = " n"
-    elif (d > 1 and a != 1 and a < 1): d = "n^"+str(d) # case 1 only
-    elif (d > 1 and a != 1): d = " n^"+str(d)
+    #if (d == 0 and a != 1): d = ""
+    #elif (d == 1 and a != 1 and a < 1): d = "n" # case 1 only
+    #elif (d == 1 and a != 1): d = " n"
+    #elif (d > 1 and a != 1 and a < 1): d = "n^"+str(d) # case 1 only
+    #elif (d > 1 and a != 1): d = " n^"+str(d)
 
     print("Using: Decrease and Conquer!")
     if (a > 0 and b > 0):
@@ -85,24 +96,24 @@ def SaC(a, b, d, k):
         if (a < 1):
             print("Running case 1: a < 1")
             #print("T(n) = O(n^"+str(d)+" log^"+str(k)+" n)")
-            print("T(n) = O("+d+k+")")
+            print("T(n) = O("+D(d)+K(k)+")")
 
         # case 2: a = 1
         elif (a == 1):
             print("Running case 2: a = 1")
             #print("T(n) = O(n^"+str(d+1)+" log^"+str(k)+" n)")
-            print("T(n) = O(n^"+str(d+1)+k+")") #pretty
+            print("T(n) = O("+D(d+1) + K(k)+")")
 
         # case 3: a > 1
         elif (a > 1):
             print("Running case 3: a > 1")
             #print("T(n) = O("+str(a)+"^n/"+str(b)+" n^"+str(d)+" log^"+str(k)+" n)")
-            print("T(n) = O("+str(a)+"^n/"+str(b)+d+k+")") #pretty
+            print("T(n) = O("+str(a)+"^n/"+str(b)+D(d) + K(k)+")")
     else: 
         print("Invalid input!")
 
 # Lets compute solution for T(n) using Divide and Conquer (DaC)
-DaC(4, 2, 2, 1)
+#DaC(4, 3, 2, 2)
 
 # Lets compute solution for T(n) using Decrease and Conquer (SaC)
-#SaC(1, 1, 1, 0)
+SaC(1, 1, 1, 1)
