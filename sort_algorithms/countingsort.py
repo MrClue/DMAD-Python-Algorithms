@@ -1,3 +1,8 @@
+from itertools import count
+from operator import index
+
+from numpy import array
+
 def countingSort(array):
     size = len(array)
     output = [0] * size
@@ -25,8 +30,16 @@ def countingSort(array):
     for i in range(0, size):
         array[i] = output[i]
 
+    # Printing working array C
+    c = []
+    for i in range(0, size - 1):
+        c.append(count[i])
+    
+    print("Final working array C")
+    print(c)
+        
 
-data = [7,4,1,2,6,4,0,4,4,4,7,2]
+data = [3,1,4,3,5,0,3,1]
 countingSort(data)
 print("Sorted Array in Ascending Order: ")
 print(data)
