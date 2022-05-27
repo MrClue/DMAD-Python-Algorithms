@@ -1,32 +1,39 @@
 from itertools import count
 from operator import index
-
 from numpy import array
 
 def countingSort(array):
     size = len(array)
     output = [0] * size
-    c_start = []
+
+    c1 = []
+    c2 = []
     c_final = []
 
     # Initialize count array
-    count = [0] * 10
+    count = [0] * size
 
     # Store the count of each elements in count array
     for i in range(0, size):
         count[array[i]] += 1
 
-    # Printing working array C
+    # Printing C1
     for i in range(0, size - 1):
-        c_start.append(count[i])
+        c1.append(count[i])
     
-    print("Start working array C")
-    print(c_start)
-    print("\t")
+    print("C: (stored counts of A)")
+    print(c1)
 
     # Store the cummulative count
-    for i in range(1, 10):
+    for i in range(1, size):
         count[i] += count[i - 1]
+
+    # Printing C2
+    for i in range(0, size - 1):
+        c2.append(count[i])
+    
+    print("C: (cummulative count)")
+    print(c2,"\n")
 
     # Find the index of each element of the original array in count array
     # place the elements in output array
@@ -48,9 +55,12 @@ def countingSort(array):
     print(c_final)
         
 
-data = [3,1,4,3,5,0,3,1]
-print("Start input")
+# OUTPUT
+data = [3, 1, 4, 3, 5, 0, 3, 1]
+
+print("A: (start input)")
 print(data)
+
 countingSort(data)
 print("Sorted Array in Ascending Order: ")
 print(data)
