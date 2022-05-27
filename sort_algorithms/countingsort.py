@@ -6,6 +6,8 @@ from numpy import array
 def countingSort(array):
     size = len(array)
     output = [0] * size
+    c_start = []
+    c_final = []
 
     # Initialize count array
     count = [0] * 10
@@ -13,6 +15,14 @@ def countingSort(array):
     # Store the count of each elements in count array
     for i in range(0, size):
         count[array[i]] += 1
+
+    # Printing working array C
+    for i in range(0, size - 1):
+        c_start.append(count[i])
+    
+    print("Start working array C")
+    print(c_start)
+    print("\t")
 
     # Store the cummulative count
     for i in range(1, 10):
@@ -31,15 +41,16 @@ def countingSort(array):
         array[i] = output[i]
 
     # Printing working array C
-    c = []
     for i in range(0, size - 1):
-        c.append(count[i])
+        c_final.append(count[i])
     
     print("Final working array C")
-    print(c)
+    print(c_final)
         
 
 data = [3,1,4,3,5,0,3,1]
+print("Start input")
+print(data)
 countingSort(data)
 print("Sorted Array in Ascending Order: ")
 print(data)
