@@ -36,15 +36,13 @@ def c5(x, y):
 # defining n to some random large number (to compute results)
 n = 123
 
-# output
-#c1(1, math.sqrt(n)) # f1 = 1, g1 = sqrt(n)
-#c1(n**2, n**3) # f2 = n^2, g2 = n^3
+# Noter:
+# - "kvadratrod(x)" er "math.sqrt(x)"
+# - "n^2" er "n**2"
 
-print("(a)")
-c1(1 + n**2, math.sqrt(n) + n**3)
-
-print("(b)")
-c2(math.sqrt(n) + n**3, 1 + n**2)
-
-print("(c)")
-c1(1/n**2, math.sqrt(n)/n**3)
+# OUTPUT:
+#c1(x, y) # x er O(y)
+#c2(x, y) # x er Ω(y)
+#c3(x, y) # x er ϴ(y)
+#c4(x, y) # x er o(y)
+#c5(x, y) # x er ω(y)
