@@ -326,12 +326,17 @@ class RedBlackTree():
 if __name__ == "__main__":
     bst = RedBlackTree()
 
-    bst.insert(41)
-    bst.insert(38)
-    bst.insert(31)
-    bst.insert(12)
-    bst.insert(19)
+    # insert using correct index order!
+    
+    bst.insert(5)
+    bst.insert(3)
+    bst.insert(7)
+    bst.insert(2)
+    bst.insert(4)
+    bst.insert(6)
+    bst.insert(9)
     bst.insert(8)
+    bst.insert(10)
 
     bst.print_tree()
 
@@ -341,6 +346,6 @@ if __name__ == "__main__":
     # bst.print_tree()
 
     # Insert
-    # print("\nAfter inserting an element")
-    # bst.insert(11)
-    # bst.print_tree()
+    print("\nAfter inserting an element")
+    bst.insert(11)
+    bst.print_tree()
