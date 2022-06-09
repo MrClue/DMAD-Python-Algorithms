@@ -14,21 +14,10 @@ n = 123456789
 def c1(x, y):
     # x er O(y)
     print("Case 1: x er O(y)")
-    print(str(x)+" er <=("+str(y)+"): " + str(x <= y) + "\n")
-#    if (x >= n and y >= n): # x og y har "n" condition
-#        print(str(x)+" er <=("+str(y)+"): " + str(x <= y) + "\n")
-
-#    if (x >= n and y < n): # x = "n" condition, y = konstant
-#        print("False" + "\n")
-
-#    if (x < n and y >= n): # x = konstant, y = "n" condition
-#        print("TRUE" + "\n")
-
-#    if (x < n and y < n): # x og y = konstanter
-#        print("TRUE" + "\n")
-
-#    else: # original
-#        print(str(x)+" er <=("+str(y)+"): " + str(x <= y) + "\n")
+    if (x+y < n and x < 1000 and y < 1000): # X and Y are MOST LIKELY constants, e.g. "x = 4, y = 3"
+        print(str(x)+" er <=("+str(y)+"): TRUE, (both constant time)")
+    else: # do original func
+        print(str(x)+" er <=("+str(y)+"): " + str(x <= y) + "\n")
 
 def c2(x, y):
     # x er Ω(y) --- \u03A9
