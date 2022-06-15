@@ -2,6 +2,9 @@
 
 """
     Implementing Partition(A, p, r)
+
+    Runs partition from index [p] to the pivot index [r]
+    Index start from 0
 """
 
 def partition(A, p, r):
@@ -30,5 +33,5 @@ def partition(A, p, r):
     return A # hvis opgaven bare siger: udfør PARTITION(A, q, r)
 
 
-arr = [21, 17, 28, 14, 9, 18, 6, 1, 26, 15, 30, 7, 13, 19, 2]
-print(partition(arr, 3, 12))
+arr = [13, 19, 9, 5, 12, 8, 7, 4, 21, 2, 6, 11]
+print(partition(arr, 0, 11))

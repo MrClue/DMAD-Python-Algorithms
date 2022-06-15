@@ -210,6 +210,7 @@ class Node {
     };
   }
   
+  // driver code
   const bst = new BST();
   
   bst.add(9);
@@ -222,13 +223,16 @@ class Node {
   bst.add(7);
   bst.add(20);
   
-  console.log(bst.findMinHeight());
-  console.log(bst.findMaxHeight());
-  console.log(bst.isBalanced());
+  console.log('Min-height: ' + bst.findMinHeight());
+  console.log('Max-height: ' + bst.findMaxHeight());
+  console.log('Is-balanced: ' + bst.isBalanced());
+  
   bst.add(10);
-  console.log(bst.findMinHeight());
-  console.log(bst.findMaxHeight());
-  console.log(bst.isBalanced());
+
+  console.log('Min-height: ' + bst.findMinHeight());
+  console.log('Max-height: ' + bst.findMaxHeight());
+  console.log('Is-balanced: ' + bst.isBalanced());
+
   console.log('inOrder: ' + bst.inOrder());
   console.log('preOrder: ' + bst.preOrder());
   console.log('postOrder: ' + bst.postOrder());
