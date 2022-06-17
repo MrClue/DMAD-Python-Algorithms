@@ -60,9 +60,10 @@ def constructTrees(start, end):
 
 # Driver Code
 if __name__ == '__main__':
+	counter = 0
 
 	# Construct all possible BSTs
-	totalTreesFrom1toN = constructTrees(1, 4)
+	totalTreesFrom1toN = constructTrees(1, 3)
 
 	""" Printing preorder traversal of
 		all constructed BSTs """
@@ -71,5 +72,9 @@ if __name__ == '__main__':
 	for i in range(len(totalTreesFrom1toN)):
 		preorder(totalTreesFrom1toN[i])
 		print()
+		counter = counter + 1
+
+	print("Total trees:", counter)
+
 
 

@@ -7,14 +7,14 @@ def log(a):
     return math.log(a, log_version)
 
 # defining n to some random large number (to compute results)
-n = 123456789
+n = 123
 
 # Compare run-times using asymptotic notation
 
 def c1(x, y):
     # x er O(y)
     print("Case 1: x er O(y)")
-    if (x+y < n and x < 1000 and y < 1000): # X and Y are MOST LIKELY constants, e.g. "x = 4, y = 3"
+    if (x+y < n and x < 50 and y < 50): # X and Y are MOST LIKELY constants, e.g. "x = 4, y = 3"
         print(str(x)+" er <=("+str(y)+"): TRUE, (both constant time)")
     else: # do original func
         print(str(x)+" er <=("+str(y)+"): " + str(x <= y) + "\n")
