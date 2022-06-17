@@ -1,33 +1,52 @@
-def QuickSort(arr):
+# function to find the partition position
+def partition(array, low, high):
 
-    elements = len(arr)
-    
-    #Base case
-    if elements < 2:
-        return arr
-    
-    current_position = 0 #Position of the partitioning element
+  # choose the rightmost element as pivot
+  pivot = array[high]
 
-    for i in range(1, elements): #Partitioning loop
-         if arr[i] <= arr[0]:
-              current_position += 1
-              temp = arr[i]
-              arr[i] = arr[current_position]
-              arr[current_position] = temp
+  # pointer for greater element
+  i = low - 1
 
-    temp = arr[0]
-    arr[0] = arr[current_position] 
-    arr[current_position] = temp #Brings pivot to it's appropriate position
-    
-    left = QuickSort(arr[0:current_position]) #Sorts the elements to the left of pivot
-    right = QuickSort(arr[current_position+1:elements]) #sorts the elements to the right of pivot
+  # traverse through all elements
+  # compare each element with pivot
+  for j in range(low, high):
+    if array[j] <= pivot:
+      # if element smaller than pivot is found
+      # swap it with the greater element pointed by i
+      i = i + 1
 
-    arr = left + [arr[current_position]] + right #Merging everything together
-    
-    return arr
+      # swapping element at i with element at j
+      (array[i], array[j]) = (array[j], array[i])
+
+  # swap the pivot element with the greater element specified by i
+  (array[i + 1], array[high]) = (array[high], array[i + 1])
+
+  # return the position from where partition is done
+  return i + 1
+
+# function to perform quicksort
+def quickSort(array, low, high):
+  if low < high:
+
+    # find pivot element such that
+    # element smaller than pivot are on the left
+    # element greater than pivot are on the right
+    pi = partition(array, low, high)
+
+    # recursive call on the left of pivot
+    quickSort(array, low, pi - 1)
+
+    # recursive call on the right of pivot
+    quickSort(array, pi + 1, high)
 
 
+data = [8]
+print("Unsorted Array")
+print(data)
 
-array_to_be_sorted = [4,2,7,3,1,6]
-print("Input:", array_to_be_sorted)
-print("Sorted:", QuickSort(array_to_be_sorted))
+size = len(data)
+
+quickSort(data, 0, size - 1)
+
+print('Sorted Array in Ascending Order:')
+print(data)

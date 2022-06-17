@@ -34,17 +34,12 @@ printPush(18)
 printPush(10)
 printPush(12)
 printPush(8)
-printPush(9)
-printPush(4)
-printPush(7)
-printPush(5)
-printPush(2)
 
 print() # new line
 
 # extracting the maximum element from the heap
-print("HEAP-EXTRACT-MAX: "+str(-1 * heap[0]) + "\n")
-element = heappop(heap)
+#print("HEAP-EXTRACT-MAX: "+str(-1 * heap[0]) + "\n")
+#element = heappop(heap)
 
 # printing the elements of the heap
 print("The Heap Elements: ")
