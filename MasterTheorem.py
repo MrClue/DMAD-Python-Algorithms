@@ -11,7 +11,7 @@ def D(d):
         return ""
     elif (d == 1):
         return "n"
-    elif (d > 1):
+    elif (d > 0 and d != 1):
         return "n^"+str(d)
 
 def K(k):
@@ -19,7 +19,7 @@ def K(k):
         return ""
     elif (k == 1):
         return " * log(n)"
-    elif (k > 1):
+    elif (k > 0 and k != 1):
         return " * log^"+str(k)+"(n)"
 
 # Divide and Conquer (DaC)
@@ -35,6 +35,7 @@ def DaC(a, b, d, k):
     print("Using: Divide and Conquer!")
     # check main constants
     if (a >= 1 and b > 1 and d >= 0):
+        
         # case 1: log_b(a) > d
         if (math.log(a, b) > d):
             result = math.log(a, b)
@@ -113,7 +114,7 @@ def SaC(a, b, d, k):
         print("Invalid input!")
 
 # Lets compute solution for T(n) using Divide and Conquer (DaC)
-#DaC(4, 3, 2, 2)
+DaC(9, 3, 0.5, 0)
 
 # Lets compute solution for T(n) using Decrease and Conquer (SaC)
-SaC(1, 1, 1, 1)
+#SaC(1, 1, 1, 1)
