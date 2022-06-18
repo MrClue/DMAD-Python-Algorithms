@@ -33,5 +33,6 @@ def partition(A, p, r):
     return A # hvis opgaven bare siger: udfør PARTITION(A, q, r)
 
 
-arr = [13, 19, 9, 5, 12, 8, 7, 4, 21, 2, 6, 11]
-print(partition(arr, 0, 11))
+arr = [21, 17, 28, 14, 9, 18, 6, 1, 26, 15, 30, 7, 13, 19, 2]
+# PARTITION(A, q, r) HUSK array starter i 0. Så (A,4,13) --> (A,3,12) i koden.
+print(partition(arr, 3, 12))
