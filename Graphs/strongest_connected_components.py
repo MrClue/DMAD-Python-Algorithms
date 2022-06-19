@@ -57,17 +57,33 @@ class Graph:
                 print("")
             
 
+# a = 0
+# b = 1
+# c = 2
+# d = 3
+# e = 4
+# f = 5
+# g = 6
+# h = 7
+# i = 8
 
-g = Graph(8)
-g.add_edge(0, 1)
-g.add_edge(1, 2)
-g.add_edge(2, 3)
-g.add_edge(2, 4)
-g.add_edge(3, 0)
-g.add_edge(4, 5)
-g.add_edge(5, 6)
-g.add_edge(6, 4)
-g.add_edge(6, 7)
+g = Graph(9)
+g.add_edge(0, 1) # a -> b
+g.add_edge(0, 3) # a -> d
+g.add_edge(1, 2) # b -> c
+g.add_edge(1, 3) # b -> d
+g.add_edge(2, 4) # c -> e
+g.add_edge(4, 1) # e -> b
+g.add_edge(3, 4) # d -> e
+g.add_edge(4, 5) # e -> f
+g.add_edge(5, 2) # f -> c
+g.add_edge(5, 7) # f -> h
+g.add_edge(7, 4) # h -> e
+g.add_edge(7, 8) # h -> i
+g.add_edge(5, 8) # f -> i
+g.add_edge(6, 7) # g -> h
+g.add_edge(6, 3) # g -> d
+
 
 print("Strongly Connected Components:")
 g.print_scc()
