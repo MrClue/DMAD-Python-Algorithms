@@ -35,9 +35,14 @@ def radixSort(array):
     place = 1
     while max_element // place > 0:
         countingSort(array, place)
+        
+        # REMEMBER if iterations
+        if (place == 100): # Define iteration. 1 = 1, 10 = 2, 100 = 3, 1000 = 4.
+            break
+
         place *= 10
 
 
-data = [121, 432, 564, 23, 1, 45, 788]
+data = [2452, 5363, 4433, 1413, 2433, 3222, 2121]
 radixSort(data)
 print(data)
