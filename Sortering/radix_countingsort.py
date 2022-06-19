@@ -37,8 +37,8 @@ def radixSort(array):
         countingSort(array, place)
         
         # REMEMBER if iterations
-        if (place == 100): # Define iteration. 1 = 1, 10 = 2, 100 = 3, 1000 = 4.
-            break
+        # if (place == 100): # Define iteration. 1 = 1, 10 = 2, 100 = 3, 1000 = 4.
+        #    break
 
         place *= 10
 
