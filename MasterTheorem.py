@@ -114,7 +114,11 @@ def SaC(a, b, d, k):
         print("Invalid input!")
 
 # Lets compute solution for T(n) using Divide and Conquer (DaC)
-DaC(9, 3, 0.5, 0)
+DaC(3, 3, 1, 1)
 
 # Lets compute solution for T(n) using Decrease and Conquer (SaC)
 #SaC(1, 1, 1, 1)
+
+""" EXTRA STUFF """
+#log_version = 6
+#print(math.log(x, log_version))
