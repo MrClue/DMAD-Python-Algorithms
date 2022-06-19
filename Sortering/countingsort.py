@@ -5,7 +5,7 @@ def count_sort(arr):
 
     # Create a count array to store count of individual
     # elements and initialize count array as 0
-    count_arr = [0 for _ in range(range_of_elements)]
+    count_arr = [0 for _ in range(range_of_elements)] # evt. (+1 eller mere)
     output_arr = [0 for _ in range(len(arr))]
  
     # Store count of each character

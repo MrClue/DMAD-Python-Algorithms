@@ -3,7 +3,7 @@
 import math
 
 def log(a):
-    log_version = 10
+    log_version = 2
     return math.log(a, log_version)
 
 # defining n to some random large number (to compute results)
@@ -14,10 +14,11 @@ n = 123
 def c1(x, y):
     # x er O(y)
     print("Case 1: x er O(y)")
-    if (x+y < n and x < 50 and y < 50): # X and Y are MOST LIKELY constants, e.g. "x = 4, y = 3"
-        print(str(x)+" er <=("+str(y)+"): TRUE, (both constant time)")
-    else: # do original func
-        print(str(x)+" er <=("+str(y)+"): " + str(x <= y) + "\n")
+    print(str(x)+" er <=("+str(y)+"): " + str(x <= y) + "\n")
+    #if (x+y < n and x < 50 and y < 50): # X and Y are MOST LIKELY constants, e.g. "x = 4, y = 3"
+    #    print(str(x)+" er <=("+str(y)+"): TRUE, (both constant time)")
+    #else: # do original func
+    #    print(str(x)+" er <=("+str(y)+"): " + str(x <= y) + "\n")
 
 def c2(x, y):
     # x er Ω(y) --- \u03A9
@@ -45,7 +46,7 @@ def c5(x, y):
 # - Konstanter "(1,2,3...)" har altid samme voksehastighed! De er altid lavest voksehastighed i forhold til andre!
 
 # OUTPUT:
-#c1(x, y) # x er O(y) --- Konstanter (1,2,3...) er altid = TRUE, (konstant voksehastighed)!
+c1(n**(1/4), n**(1/3)) # x er O(y) --- Konstanter (1,2,3...) er altid = TRUE, (konstant voksehastighed)!
 #c2(x, y) # x er Ω(y)
 #c3(x, y) # x er ϴ(y)
 #c4(x, y) # x er o(y)
